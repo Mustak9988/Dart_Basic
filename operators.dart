@@ -1,3 +1,4 @@
+
 void main() {
 // ****************** Arithmetic Operator***************
 
@@ -54,4 +55,14 @@ void main() {
 
   // ****************** Relational operator ***************
   //it will be discus in Conditional statement
+
+
+  //bit wise left shift, right shift and or and
+
+  assert((3 << 1) == 6); // 0011 << 1 == 0110
+  assert((3 | 4) == 7); // 0011 | 0100 == 0111
+  assert((3 & 4) == 0); // 0011 & 0100 == 0000
+
+
+
 }

@@ -12,8 +12,8 @@ void main(){
   print(raw2);
 
   print("Please enter a correct value  \n");
-  //dynamic name = stdin.readLineSync();
-  //print('Entered value is ${name}');
+  late dynamic name = stdin.readLineSync();
+  print('Entered value is ${name}');
 
 
   //user multiple input and output
@@ -35,14 +35,30 @@ void main(){
 
   Object nameThree = 'Dhaka';
   bool isTrue = false;
-  int num = 10;
+
+  //integer can contain hax value as well
+  //integer is 64 bits and 8 bytes
+  //int num = 10;
+  int x = 1;
+  int hex = 0xDEADBEEF;
+  //double is 64 bits and 8 bytes
   double num2 = 10.20;
+
+  //num is another type of variable which can easily identify whether it is int or double
+  //dart does not support float variable
+
+  num number1 = 103;
+  //num number1 = 103.25;
+
+  print('Num variable data ----> ${number1} ');
+  print(number1.runtimeType);
+
   String name3 = 'Hello man';
   var name4 = 'Var type can take input any type such as String, int or double.\n Once assign any type '
       'we can not change it anymore';
   dynamic name5 = 'It is same as var; however, we have the access the type in run type or any other type.';
 
-  print("Number in INT is : $num");
+  print("Number in INT is of hex value : $hex");
   print("Value in Double is $num2");
   print("Value in String is $name3");
   print("\n$name4");
@@ -64,6 +80,16 @@ void main(){
   // assert means force to follow the command
   assert(age == 78);
   print('There will be error if age is not 78. If you want to try please make some change.');
+
+
+//multiline string
+  var s1 = '''
+You can create
+multi-line strings like this one.
+''';
+
+  var s2 = """This is also a
+multi-line string.""";
 
 
 
@@ -91,20 +117,48 @@ void main(){
 //Here ? means value could be null
 //  ! means value are not null
   print("\n Enter your name : ");
-  String? a1 = stdin.readLineSync();
-  print("name is : $a1");
+ // String? a1 = stdin.readLineSync();
+ // print("name is : $a1");
 
   print("\n Enter your age : ");
-  var ages = stdin.readLineSync();
-  print("age is : $ages");
+  //var ages = stdin.readLineSync();
+ // print("age is : $ages");
 
   print("\n Enter your salary : ");
-  double salary = double.parse(stdin.readLineSync()!);
-  print("salary is : $salary");
+ //double salary = double.parse(stdin.readLineSync()!);
+ // print("salary is : $salary");
 
-  int? phoneNum ;
+  int? phoneNum =0 ;
 
   assert(phoneNum != null);
   print(phoneNum );
+
+  late var names;
+
+  names = 10 > 0? 'khadem':'MOstak';
+  if (true)
+    print(names);
+
+  print('Entered value is ${names}');
+
+
+  //final and const keyword use if we want to fixed the value and will not change in future
+  //Both are same however, constant takes memory during compile time
+  //in class you can not declare constant without static variable, Meanwhile, final can be declare
+
+  //without type annotation
+  final personName = 'Mostak';
+
+  print('I am  Local variable without type '+personName);
+  print(personName.runtimeType);
+
+  //you can not change the variable value when it is declared as a final
+
+ // personName = 'tahin';
+
+  //constant variable can be change in compile time
+
+  const String personalData = 'hello';
+ // personalData = "Data";
 
 }
