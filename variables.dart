@@ -13,7 +13,7 @@ void main(){
 
   print("Please enter a correct value  \n");
   late dynamic name = stdin.readLineSync();
-  print('Entered value is ${name}');
+  print('Entered value is $name');
 
 
   //user multiple input and output
@@ -160,5 +160,8 @@ multi-line string.""";
 
   const String personalData = 'hello';
  // personalData = "Data";
+
+
+
 
 }
